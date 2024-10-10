@@ -35,6 +35,21 @@ normalized_used_price: Normalized price of the used/refurbished device in euros
 
 
 
+# DATA PREPROCESSING
+Data preprocessing is a critical step I take to prepare raw data for modeling and analysis. This process involves several key activities to ensure the data is clean, organized, and suitable for machine learning algorithms. Here’s how I approach data preprocessing:
+
+1. Data Cleaning
+Handling Missing Values: I begin by identifying and addressing any missing data in the dataset. To ensure accuracy, we used a multi-step approach for imputing missing values: initially, we filled in missing values using column medians grouped by `release_year` and `brand_name`. Next, we used the median values for `brand_name` alone. For any remaining missing values, we applied the overall column median. This comprehensive method ensured that our data was complete and consistent across all features.
+Removing Duplicates: I check for and remove any duplicate records to maintain the accuracy and integrity of the dataset. This step is crucial for ensuring that each entry in the dataset is unique and prevents skewed results.
+Handling Outliers: I identify outliers that could potentially distort the analysis and results. Depending on the situation, I either remove these outliers or apply techniques to mitigate their impact, ensuring that they do not disproportionately affect the overall model performance.
+2. Feature Engineering
+Creating New Features: I created a new column called `years_since_release` by subtracting the `release_year` from the baseline year, 2021. This new feature provides a clearer picture of the time elapsed since the device's release. I dropped the original `release_year` column to avoid redundancy, as `years_since_release` conveys the same information in a more useful format for analysis.
+Preparing the Data for Modeling: To predict the normalized price of used devices, I set the dependent variable (y) as `normalized_used_price` and used all other features as the independent variables (X). I added an intercept term to the data and created dummy variables for categorical features to ensure proper encoding. Next, I split the dataset into training (70%) and testing (30%) sets. This preparation helps me build and evaluate the Linear Regression model effectively, using all relevant features and properly handling categorical data.
+
+
+
+
+
 
 
 # MODEL PERFORMANCE
