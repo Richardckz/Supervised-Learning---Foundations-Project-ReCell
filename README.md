@@ -10,8 +10,11 @@ Refurbished and used devices continue to provide cost-effective alternatives to 
 
 
 
-# OBJECTIVE
+
+# OBJECTIVE
 The rising potential of this comparatively under-the-radar market has led me to develop an ML-based solution for creating a dynamic pricing strategy for used and refurbished devices. At ReCell, a startup eager to leverage this market potential, I have been tasked with analyzing the provided data and building a linear regression model to predict the price of a used phone or tablet. My goal is to identify the key factors that significantly influence pricing and use these insights to enhance pricing strategies.
+
+
 
 
 
