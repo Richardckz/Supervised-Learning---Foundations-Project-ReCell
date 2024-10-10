@@ -75,10 +75,15 @@ Here’s how well the model performed:
 
 Metric	Train Data	Test Data
 RMSE (Root Mean Squared Error)	0.375626	0.379049
+
 MAE (Mean Absolute Error)	0.296987	0.294222
+
 R-squared	0.695109	0.699165
+
 Adj. R-squared	0.694857	0.698583
+
 MAPE (Mean Absolute Percentage Error)	5.732845%	5.715602%
+
 Here's what each metric means:
 
 RMSE (Root Mean Squared Error): This tells us how far off the model’s predictions are from the actual prices, on average. For both the training data (used to build the model) and test data (new data), the numbers are around 0.38. Lower values are better.
